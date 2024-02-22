@@ -1,0 +1,41 @@
+{
+  "name": "sazumifile2",
+  "version": "1.0.1",
+  "description": "Free Unlimited Hosting Image",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SazumiVicky/uploadfile.git"
+  },
+  "keywords": [
+    "sazumiviki",
+    "makemeow",
+    "ayaka",
+    "uploadimage",
+    "server",
+    "nodejs"
+  ],
+  "author": "Sazumi Viki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SazumiVicky/uploadfile/issues"
+  },
+  "homepage": "https://github.com/SazumiVicky/uploadfile#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "firebase-admin": "^12.0.0",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.1.0",
+    "mongose": "^0.0.2-security",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.2",
+    "os": "^0.1.2",
+    "server": "^1.0.38",
+    "sweetalert2": "^11.7.12"
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>sazumiFile | Media Hosting Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="./src/dash-style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="icon" class=js-site-favicon type=image/ico href="https://cdn.jsdelivr.net/gh/SazumiVicky/Storage@main/meow.ico">
+  <meta
+    name="description"
+    content="sazumiFile is a media hosting platform that allows you to easily upload and share images, audio, and videos. Enjoy a user-friendly interface, set expiration dates for files, and maintain control over your media. Save server resources with automatic removal of expired media."
+  >
+  <meta
+    name="twitter:description"
+    content="sazumiFile is a media hosting platform that allows you to easily upload and share images, audio, and videos. Enjoy a user-friendly interface, set expiration dates for files, and maintain control over your media. Save server resources with automatic removal of expired media."
+  >
+  <meta
+    property="og:description"
+    content="sazumiFile is a media hosting platform that allows you to easily upload and share images, audio, and videos. Enjoy a user-friendly interface, set expiration dates for files, and maintain control over your media. Save server resources with automatic removal of expired media."
+  >
+</head>
+
+<body>
+  <div class="container mx-auto px-4 py-8">
+    <div class="upload-form">
+      <h1><b>Upload Your File</b></h1>
+      <form id="uploadForm" class="flex flex-col items-center" action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file" class="upload-file bg-opacity-90 hover:bg-opacity-100 text-white rounded-md py-2 px-4 cursor-pointer">
+          <input type="file" id="file" name="file" accept="image/*, audio/*, video/*" class="input-file" required>
+          <span>📁 Choose File</span>
+        </label>
+        <div id="filePreview"></div>
+        <button type="submit" class="mt-4 bg-opacity-90 hover:bg-opacity-100 text-white rounded-md py-2 px-4 text-center">
+          🚀 Upload
+        </button>
+      </form>
+    </div>
+    <div class="footer-region">
+      <!-- Apa yah -->
+      Region: Not Found
+    </div>
+  </div>
+  <footer>
+    &copy sazumi.moe, Cloud. All rights reserved. |
+    <a href="/pages"><b>Pages</b></a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./src/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ember.js/5.6.0/ember-template-compiler.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RJHNN3778"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3RJHNN3778');
+</script>
+</body>
+
+</html>

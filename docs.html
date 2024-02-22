@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>sazumiFile | API Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-tomorrow.min.css">
+  <link rel="alternate icon" class=js-site-favicon type=image/ico href="https://cdn.jsdelivr.net/gh/SazumiVicky/Storage@main/meow.ico">
+  <link rel=icon class=js-site-favicon type=image/ico+xml href="https://cdn.jsdelivr.net/gh/SazumiVicky/Storage@main/meow.ico">
+  <meta name="description" content="sazumiFile is a media hosting platform that allows you to easily upload and share images, audio, and videos. Enjoy a user-friendly interface, set expiration dates for files, and maintain control over your media. Save server resources with automatic removal of expired media.">
+  <meta name="twitter:description" content="sazumiFile is a media hosting platform that allows you to easily upload and share images, audio, and videos. Enjoy a user-friendly interface, set expiration dates for files, and maintain control over your media. Save server resources with automatic removal of expired media.">
+  <meta property="og:description" content="sazumiFile is a media hosting platform that allows you to easily upload and share images, audio, and videos. Enjoy a user-friendly interface, set expiration dates for files, and maintain control over your media. Save server resources with automatic removal of expired media.">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 20px;
+      background-color: #0d001a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    h1 {
+      color: white;
+      text-align: center;
+      padding-bottom: 20px;
+      margin-top: 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: rgba(13, 0, 26, 0.8);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    pre {
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    code {
+      color: #a6e22e;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #999;
+      font-size: 12px;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>🐱 sazumiFile API Documentation</h1>
+
+  <div class="container mx-auto px-4 py-8">
+    <h2>POST /upload</h2>
+    <p>Uploads a file to the server.</p>
+    <p><strong>Request:</strong></p>
+    <pre><code class="language-http">
+POST /upload
+Content-Type: multipart/form-data
+
+Body:
+- file: (file) The file to upload
+    </code></pre>
+    <p><strong>Response:</strong></p>
+    <pre><code class="language-http">
+Status: 200 OK
+
+URL to the uploaded file
+    </code></pre>
+
+    <h2>DELETE /delete/:filename</h2>
+    <p>Deletes a file from the server.</p>
+    <p><strong>Request:</strong></p>
+    <pre><code class="language-http">
+DELETE /delete/:filename
+    </code></pre>
+    <p><strong>Response:</strong></p>
+    <pre><code class="language-http">
+Status: 200 OK
+    </code></pre>
+
+    <h2>GET /v1/uploads/:filename</h2>
+    <p>Checks the status of a file.</p>
+    <p><strong>Request:</strong></p>
+    <pre><code class="language-http">
+GET /v1/uploads/:filename
+    </code></pre>
+    <p><strong>Response:</strong></p>
+    <pre><code class="language-json">
+Status: 200 OK
+{
+  "filename": "example.jpg",
+  "expired": "yes" | "no"
+}
+    </code></pre>
+  </div>
+
+  <footer class="footer">
+    &copy sazumi.moe, Cloud. All rights reserved. | <a href="/"><b>Home</b></a>
+  </footer>
+</body>
+
+</html>
